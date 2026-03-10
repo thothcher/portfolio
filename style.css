@@ -607,7 +607,8 @@ header button {
     width: 100%;
 }
 
-.works-container a:nth-of-type(even) {
+.works-container a:nth-of-type(even),
+.works-container > div.list-element:nth-of-type(even) {
     margin-top: 52px;
 }
 
