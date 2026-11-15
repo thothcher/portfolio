@@ -1,39 +1,41 @@
-# Portfolio Website
+# Givi Vakhtangishvili — portfolio
 
-This is a personal portfolio website built with HTML, CSS, and JavaScript.
+A static site: no build step, no CDN. Open it through any local server
+(VS Code Live Server works; ES modules do not load from `file://`).
 
-## Project structure
+## Structure
 
-- `index.html` — main website page
-- `style.css` — custom styles
-- `cursor.js` — custom cursor effects and interactions
-- `totopbtn.js` — back-to-top button behavior
-- `mail_handler.php` — server-side email form handler
-- `thanks.html` — thank-you page after form submission
-- `imgs/` — image assets used by the site
+- `index.html` — the page, and the panels that open inside the room
+- `css/site.css` — all styles and design tokens (colours, type scale, spacing)
+- `js/data.js` — **projects, archive, students, skills, bio, links, radio stations. Edit content here.**
+- `js/main.js` — rendering, scroll reveals, room panels, radio, archive preview
+- `js/room.js` — the 3D room: layout, lights, camera views, interaction
+- `js/room-art.js` — the painted textures: Tbilisi at dusk, the portrait, the laptop screen
+- `js/room-kit.js` — helpers, material textures, the small screens, the lens shader
+- `js/audio.js` — WebAudio piano and guitar
+- `vendor/three/` — three.js r187, vendored
+- `fonts/` — Geist and Geist Mono (SIL OFL)
+- `imgs/work/` — compressed thumbnails
 
-## Features
+## The room
 
-- Responsive portfolio layout
-- Dark/light theme toggle
-- Scroll animations using AOS
-- Slick slider for carousel sections
-- Contact form handling via PHP
-- Back-to-top button and custom cursor effects
+A top-floor studio above Tbilisi, a little before eight in the evening.
+Everything is built in code: no 3D models. You start at the back of the room
+with all of it in view. Arrow keys walk and turn (W A S D also walk and
+sidestep), dragging looks around. Click to walk up to things:
 
-## Usage
+- **Portrait** — skills, bio and links open beside it. Also behind "About" in the nav.
+- **Laptop** — the projects as a live grid on its screen; every card opens the project.
+- **Piano** — click keys, drag for a glissando, or type `A S D F G H J K` (black keys on `W E T Y U`).
+- **Guitar** — sweep across the strings, press on the frets, pick a chord, `Space` to strum.
+- **Radio** — on every time the site opens (if the browser refuses sound before the visitor has touched the page, it starts with their first click, tap or key press). Play, change station, volume. Cool jazz, lounge and house only. Pausing lasts for the visit only.
+- **Armchair or window** — sit down and look at the city.
+- Inkblot, floor lamp, neon and the old monitors react as well. Incense burns on the desk.
 
-1. Open `index.html` in your browser for a static preview.
-2. For contact form functionality, host the site on a PHP-enabled server and ensure `mail_handler.php` is accessible.
+`Esc` or "Back to the room" returns to the middle. Now and then something
+flickers into green code. That is on purpose.
 
-## Notes
+## Previous version
 
-- External libraries are loaded from CDN:
-  - jQuery
-  - Bootstrap 3
-  - AOS animations
-  - Slick carousel
-
-## License
-
-Feel free to reuse and customize this project for your own portfolio.
+The old site is kept untouched as `index.old.html` with `style.css`,
+`cursor.js`, `totopbtn.js`, `thanks.html` and `mail_handler.php`.
